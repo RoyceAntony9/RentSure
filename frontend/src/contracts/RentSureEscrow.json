@@ -1,0 +1,180 @@
+{
+  "address": "0xc81c7339796E3cF7F2700AB119B78FbC7E92e400",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tenant",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_disputeResolver",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_agreementHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_depositAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "landlord", "type": "address"},
+        {"indexed": true, "internalType": "address", "name": "tenant", "type": "address"},
+        {"indexed": false, "internalType": "bytes32", "name": "agreementHash", "type": "bytes32"},
+        {"indexed": false, "internalType": "uint256", "name": "depositAmount", "type": "uint256"}
+      ],
+      "name": "AgreementRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "tenant", "type": "address"},
+        {"indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256"}
+      ],
+      "name": "DepositLocked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "recipient", "type": "address"},
+        {"indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256"}
+      ],
+      "name": "DepositReleased",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "party", "type": "address"}
+      ],
+      "name": "DisputeRaised",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "recipient", "type": "address"},
+        {"indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256"}
+      ],
+      "name": "DisputeResolved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {"indexed": true, "internalType": "address", "name": "party", "type": "address"}
+      ],
+      "name": "ReleaseApproved",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "agreementHash",
+      "outputs": [{"internalType": "bytes32", "name": "", "type": "bytes32"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "approveRelease",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "depositAmount",
+      "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "depositSecurity",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "disputeResolver",
+      "outputs": [{"internalType": "address", "name": "", "type": "address"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEscrowBalance",
+      "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "landlord",
+      "outputs": [{"internalType": "address", "name": "", "type": "address"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "landlordApproved",
+      "outputs": [{"internalType": "bool", "name": "", "type": "bool"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "releaseDeposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "resolveDispute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "status",
+      "outputs": [{"internalType": "enum RentSureEscrow.Status", "name": "", "type": "uint8"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "tenant",
+      "outputs": [{"internalType": "address", "name": "", "type": "address"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "tenantDeposited",
+      "outputs": [{"internalType": "bool", "name": "", "type": "bool"}],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ]
+}

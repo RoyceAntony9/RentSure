@@ -1,0 +1,34 @@
+RENTSURE INITIAL CLAUSE CLASSIFIER - DEVELOPMENT METRICS
+========================================================
+Dataset rows: 80 | Train: 60 | Test: 20
+Categories: 8 | Dataset: synthetic, not expert-reviewed
+Accuracy on this small held-out split: 0.7000
+
+Classification report:
+                         precision    recall  f1-score   support
+
+Liability and Penalties       0.00      0.00      0.00         2
+Maintenance and Repairs       0.40      1.00      0.57         2
+        Property Access       1.00      0.67      0.80         3
+       Rent and Payment       1.00      0.67      0.80         3
+           Restrictions       0.67      0.67      0.67         3
+       Security Deposit       0.67      1.00      0.80         2
+            Termination       1.00      1.00      1.00         3
+    Utilities and Bills       0.50      0.50      0.50         2
+
+               accuracy                           0.70        20
+              macro avg       0.65      0.69      0.64        20
+           weighted avg       0.71      0.70      0.68        20
+
+Confusion matrix (rows=true, columns=predicted):
+Labels: ['Liability and Penalties', 'Maintenance and Repairs', 'Property Access', 'Rent and Payment', 'Restrictions', 'Security Deposit', 'Termination', 'Utilities and Bills']
+[[0 2 0 0 0 0 0 0]
+ [0 2 0 0 0 0 0 0]
+ [0 0 2 0 1 0 0 0]
+ [0 0 0 2 0 0 0 1]
+ [0 0 0 0 2 1 0 0]
+ [0 0 0 0 0 2 0 0]
+ [0 0 0 0 0 0 3 0]
+ [0 1 0 0 0 0 0 1]]
+
+CAUTION: These are preliminary development metrics only. The dataset is small and synthetic; repeated writing patterns may inflate results. They do not establish real-world or legal accuracy.
